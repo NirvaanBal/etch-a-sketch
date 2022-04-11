@@ -21,8 +21,8 @@ button {
 
 .container {
     border: solid 1px #000;
-    width: 500px;
-    height: 500px;
+    /* width: 500px;
+    height: 500px; */
     margin-left: 20px;
 }
 
@@ -32,10 +32,6 @@ button {
 
 .box {
     border: solid 1px #000;
-}
-
-.box.visited {
-    background-color: #000;
 }
 
 .error {

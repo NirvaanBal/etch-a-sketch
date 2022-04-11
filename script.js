@@ -24,7 +24,11 @@ const initialize = (gridSize) => {
         box.style.width = `${500 / gridSize}px`;
         box.style.height = `${500 / gridSize}px`;
         box.addEventListener('mouseenter', (e) => {
-            e.target.classList.add('visited');
+            const red = Math.floor(Math.random() * 256);
+            const green = Math.floor(Math.random() * 256);
+            const blue = Math.floor(Math.random() * 256);
+
+            e.target.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`;
         });
     });
 };
