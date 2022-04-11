@@ -1,4 +1,5 @@
 const container = document.querySelector('.container');
+const button = document.querySelector('button');
 
 let html = '';
 for (let i = 0; i < 16; i++) {
@@ -17,3 +18,7 @@ boxes.forEach((box) =>
         e.target.classList.add('visited');
     })
 );
+
+button.addEventListener('click', () => {
+    boxes.forEach((box) => box.classList.remove('visited'));
+});
