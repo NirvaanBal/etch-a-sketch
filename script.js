@@ -10,3 +10,10 @@ for (let i = 0; i < 16; i++) {
 }
 
 container.insertAdjacentHTML('afterbegin', html);
+
+const boxes = document.querySelectorAll('.box');
+boxes.forEach((box) =>
+    box.addEventListener('mouseenter', (e) => {
+        e.target.classList.add('visited');
+    })
+);
