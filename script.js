@@ -21,8 +21,8 @@ const initialize = (gridSize) => {
 
     const boxes = document.querySelectorAll('.box');
     boxes.forEach((box) => {
-        box.style.width = `${400 / gridSize}px`;
-        box.style.height = `${400 / gridSize}px`;
+        box.style.width = `${500 / gridSize}px`;
+        box.style.height = `${500 / gridSize}px`;
         box.addEventListener('mouseenter', (e) => {
             e.target.classList.add('visited');
         });
