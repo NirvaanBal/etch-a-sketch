@@ -2,13 +2,28 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inherit;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+
+    display: flex;
+    margin: 50px;
+}
+
+button {
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 10px 0;
+    cursor: pointer;
 }
 
 .container {
     border: solid 1px #000;
-    margin: 20px;
     width: 400px;
     height: 400px;
+    margin-left: 20px;
 }
 
 .row {
@@ -21,4 +36,10 @@
 
 .box.visited {
     background-color: #000;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    width: 200px;
 }
