@@ -34,7 +34,6 @@ button.addEventListener('click', () => {
 
     if (gridSize > 100 || gridSize < 1) {
         error.textContent = 'Please provide a number between 1 and 100';
-        return;
     } else {
         container.textContent = '';
         if (!gridSize) gridSize = 16;
