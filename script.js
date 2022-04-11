@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const button = document.querySelector('button');
+let gridSize = 16;
 
 const grid = (size) => {
     let html = '';
@@ -13,17 +14,22 @@ const grid = (size) => {
 
     container.insertAdjacentHTML('afterbegin', html);
 };
-grid(16);
 
-let boxes = document.querySelectorAll('.box');
-boxes.forEach((box) =>
-    box.addEventListener('mouseenter', (e) => {
-        e.target.classList.add('visited');
-    })
-);
+const initialize = (gridSize) => {
+    grid(gridSize);
+
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach((box) =>
+        box.addEventListener('mouseenter', (e) => {
+            e.target.classList.add('visited');
+        })
+    );
+};
 
 button.addEventListener('click', () => {
     container.textContent = '';
-    const gridSize = window.prompt('Enter grid size');
-    grid(+gridSize);
+    gridSize = window.prompt('Enter grid size');
+    initialize(+gridSize);
 });
+
+initialize(gridSize);
