@@ -1,5 +1,6 @@
 const container = document.querySelector('.container');
 const button = document.querySelector('button');
+const error = document.querySelector('.error');
 let gridSize = 16;
 
 const grid = (size) => {
@@ -19,17 +20,26 @@ const initialize = (gridSize) => {
     grid(gridSize);
 
     const boxes = document.querySelectorAll('.box');
-    boxes.forEach((box) =>
+    boxes.forEach((box) => {
+        box.style.width = `${400 / gridSize}px`;
+        box.style.height = `${400 / gridSize}px`;
         box.addEventListener('mouseenter', (e) => {
             e.target.classList.add('visited');
-        })
-    );
+        });
+    });
 };
 
 button.addEventListener('click', () => {
-    container.textContent = '';
-    gridSize = window.prompt('Enter grid size');
-    initialize(+gridSize);
+    gridSize = +window.prompt('Enter grid size');
+
+    if (gridSize > 100 || gridSize < 1) {
+        error.textContent = 'Please provide a number between 1 and 100';
+        return;
+    } else {
+        container.textContent = '';
+        if (!gridSize) gridSize = 16;
+        initialize(gridSize);
+    }
 });
 
 initialize(gridSize);
