@@ -1,3 +1,3 @@
-# etch-a-sketch
+# Etch-a-Sketch
 
-A fun grid trail UI interface project
+A fun grid trail project. [Live here](https://nirvaanbal.github.io/etch-a-sketch).
